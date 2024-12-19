@@ -863,3 +863,53 @@ ul {
 .tools-category:last-child {
     margin-bottom: 0;
 } 
+
+.author-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin-top: 1rem;
+    box-shadow: 0 2px 8px rgba(255, 107, 0, 0.3);
+}
+
+.author-badge i {
+    font-size: 1rem;
+} 
+
+footer {
+    background: var(--background-color);
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: 4rem;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.designer-credit {
+    color: #666;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.designer-name {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+/* 添加一些悬停效果 */
+.designer-name:hover {
+    text-decoration: underline;
+} 
