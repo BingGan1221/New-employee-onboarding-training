@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行走20岁 - 登录</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .login-container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('image.png') center center;
+            background-size: cover;
+            position: relative;
+        }
+        
+        .login-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255, 107, 0, 0.8), rgba(74, 144, 226, 0.8));
+        }
+        
+        .login-card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            position: relative;
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .login-card h2 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .login-card p {
+            color: #666;
+            margin-bottom: 2rem;
+        }
+        
+        .login-form input {
+            width: 100%;
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            border: 2px solid #eee;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+            outline: none;
+        }
+        
+        .login-form input:focus {
+            border-color: var(--primary-color);
+        }
+        
+        .login-button {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+        
+        .login-button:hover {
+            background: #e65c00;
+        }
+        
+        .error-message {
+            color: #dc3545;
+            margin-top: 1rem;
+            display: none;
+            background: rgba(220, 53, 69, 0.1);
+            padding: 0.8rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+        }
+        
+        .brand-logo {
+            margin-bottom: 2rem;
+            padding: 1rem;
+        }
+        
+        .brand-logo img {
+            width: 180px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="brand-logo">
+                <img src="image/logo/walker20slogo-05.png" alt="行走20岁">
+            </div>
+            <h2>行走20岁入职指引</h2>
+            <p>欢迎加入我们的大家庭</p>
+            <form class="login-form" onsubmit="return checkPassword(event)">
+                <input type="password" id="password" placeholder="请输入员工密码" required>
+                <button type="submit" class="login-button">登录</button>
+            </form>
+            <p class="error-message" id="error">密码不正确，请重新输入</p>
+        </div>
+    </div>
+
+    <script>
+        // 检查是否已登录
+        if (sessionStorage.getItem('isLoggedIn')) {
+            window.location.href = 'index.html';
+        }
+
+        function checkPassword(event) {
+            event.preventDefault();
+            const password = document.getElementById('password').value;
+            // 这里设置你的密码
+            if (password === 'walker20s2025') {
+                sessionStorage.setItem('isLoggedIn', 'true');
+                window.location.href = 'index.html';
+            } else {
+                document.getElementById('error').style.display = 'block';
+            }
+            return false;
+        }
+    </script>
+</body>
+</html> 

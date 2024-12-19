@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行走20岁 - 欢迎加入我们！</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script>
+        // 检查是否已登录
+        if (!sessionStorage.getItem('isLoggedIn')) {
+            window.location.href = 'login.html';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">行走20岁</div>
+            <ul>
+                <li><a href="#onboarding" onclick="smoothScroll('onboarding'); return false;">入职办理</a></li>
+                <li><a href="#company" onclick="smoothScroll('company'); return false;">公司介绍</a></li>
+                <li><a href="#team" onclick="smoothScroll('team'); return false;">团队介绍</a></li>
+                <li><a href="#responsibility" onclick="smoothScroll('responsibility'); return false;">岗位职责</a></li>
+                <li><a href="#tools" onclick="smoothScroll('tools'); return false;">常用工具</a></li>
+                <li class="dropdown">
+                    <a href="#documents" onclick="smoothScroll('documents'); return false;">常用文档 <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#process-docs" onclick="smoothScroll('process-docs'); return false;">计调流程指引</a></li>
+                        <li><a href="#common-docs" onclick="smoothScroll('common-docs'); return false;">计调常用文档</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" onclick="logout()" class="logout-btn">退出登录</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="welcome" class="hero">
+            <div class="hero-content">
+                <h1>欢迎加入行走20岁大家庭！</h1>
+                <p>我们很高兴您选择成为我们的一员。这份入职指南将帮助您尽快融入工作环境。</p>
+                <div class="slogan">
+                    <p class="highlight">永远年轻，永远热泪盈眶！</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="onboarding">
+            <h2>入职办理</h2>
+            <div class="card">
+                <h3>需要提交的材料</h3>
+                <ul>
+                    <li>身份证复印件</li>
+                    <li>离职证明</li>
+                    <li>学历证明</li>
+                    <li>照片</li>
+                    <li>体检报告</li>
+                    <li>中国银行银行卡</li>
+                </ul>
+                <p>请于入职一周内将以上资料提交到人力资源部</p>
+                <p>人力资源部负责人：邓林赞</p>
+            </div>
+        </section>
+
+        <section id="company">
+            <h2>公司介绍</h2>
+            
+            <div class="company-intro card">
+                <h3>行走20岁品牌</h3>
+                <div class="brand-story">
+                    <p class="highlight">行走20岁——一群追逐星空，探索世界的年轻人！</p>
+                    
+                    <div class="feature-box">
+                        <h4>追逐星空</h4>
+                        <p>是头顶的浩瀚星空，从海边到山顶，从草原到沙漠，从雪山到火山，从北半球到南半球，我们大部分路线都会带大家去追星空；也是人生的星空，不断去好奇、去经历、去热爱。</p>
+                    </div>
+                    
+                    <div class="feature-box">
+                        <h4>探索世界</h4>
+                        <p>是我们旅行的世界，雪山、长河、落日、徒步、冲浪、骑行......也是内心的世界，热烈朝气，迷惘彷徨，看见真实的自己，听见内心的声音。</p>
+                    </div>
+                </div>
+
+                <div class="brand-identity">
+                    <div class="logo-intro">
+                        <h4>品牌标识</h4>
+                        <p>行走20岁由数字20+符号∞（无穷）组成，活力橙为主色调，天空蓝为辅色调，意寓20岁无穷无尽，永远年轻，热泪盈眶。</p>
+                    </div>
+                    
+                    <div class="slogan">
+                        <h4>品牌口号</h4>
+                        <p class="highlight">永远年轻，永远热泪盈眶！</p>
+                    </div>
+                </div>
+
+                <div class="target-audience">
+                    <h4>用户画像</h4>
+                    <ul>
+                        <li>年龄：18岁～35岁的大学生与职场新人</li>
+                        <li>特点：对人生充满想象，追求新鲜感、喜欢发现新奇好玩的事物</li>
+                        <li>需求：渴望遇见志同道合的人，结伴行走</li>
+                        <li>标签：折腾、活力、热情、乐于分享、有趣</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="company-vision card">
+                <h3>愿景使命</h3>
+                <div class="vision">
+                    <h4>愿景</h4>
+                    <p>影响一亿年轻人开始并保持"行走20岁"</p>
+                </div>
+                <div class="mission">
+                    <h4>使命</h4>
+                    <p>通过旅行的方式唤醒年轻人对生活的热爱，像"20岁"一样去好奇、去经历、去热爱</p>
+                </div>
+                <div class="values">
+                    <h4>价值观</h4>
+                    <p>热衷于为他人创造意义和价值，并乐在其中</p>
+                </div>
+            </div>
+
+            <div class="company-media card">
+                <h3>媒体报道</h3>
+                <div class="media-list">
+                    <a href="https://mp.weixin.qq.com/s/5QFzJb526fZ46IMv-IorqA" target="_blank" class="media-item">
+                        <i class="fas fa-newspaper"></i>
+                        <span>人民日报《2021的幸福时刻》记录了行走20岁的故事</span>
+                    </a>
+                    <a href="http://politics.people.com.cn/n1/2021/1230/c1001-32321044.html" target="_blank" class="media-item">
+                        <i class="fas fa-newspaper"></i>
+                        <span>2021，被这些幸福时刻戳到了--时政--人民网</span>
+                    </a>
+                    <a href="https://mp.weixin.qq.com/s/7QFIiN7j018s_DQ0tQDs4w" target="_blank" class="media-item">
+                        <i class="fas fa-file-alt"></i>
+                        <span>百万青年出行新选择，同频旅行更好玩！</span>
+                    </a>
+                    <a href="https://mp.weixin.qq.com/s/HRL_ydz4wsl1dLxRNR2xVQ" target="_blank" class="media-item">
+                        <i class="fas fa-star"></i>
+                        <span>一群追星星的青年，想用行走的力量，一起见众生，见天地，见自己</span>
+                    </a>
+                    <a href="https://mp.weixin.qq.com/s/MF9LxQCPNNsGu2Ta8Rd6lg" target="_blank" class="media-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>痛心！！行走20岁正在经受"网络暴力"！比造谣更可怕的是......</span>
+                    </a>
+                    <a href="https://mp.weixin.qq.com/s/jEUBIm0s0PF7eYyrMKxq8A" target="_blank" class="media-item">
+                        <i class="fas fa-users"></i>
+                        <span>从未想过，我会成为这样的青年！！！</span>
+                    </a>
+                    <a href="https://mp.weixin.qq.com/s/yE3dGWi1oVBl8OfYLETjiA" target="_blank" class="media-item">
+                        <i class="fas fa-rocket"></i>
+                        <span>一定要去场看次火箭发射！！！因为值得啊！！！</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="team">
+            <h2>产品部团队介绍</h2>
+            <div class="team-grid">
+                <div class="team-group">
+                    <h3>产品部部长</h3>
+                    <div class="member-cards">
+                        <div class="member-card">
+                            <div class="avatar">
+                                <img src="image/huangbaixiang.png" alt="黄百祥">
+                            </div>
+                            <h4>黄百祥（阿叻）</h4>
+                        </div>
+                        <div class="member-card">
+                            <div class="avatar">
+                                <img src="image/songminghao.png" alt="宋铭浩">
+                            </div>
+                            <h4>宋铭浩（铭浩）</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-group">
+                    <h3>队长管理</h3>
+                    <div class="member-cards">
+                        <div class="member-card">
+                            <div class="avatar">
+                                <img src="image/zhangzuoxing.png" alt="张作兴">
+                            </div>
+                            <h4>张作兴（阿怪）</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-group">
+                    <h3>境内长线经理</h3>
+                    <div class="member-cards">
+                        <div class="member-card">
+                            <div class="avatar">
+                                <img src="image/jiaoyihang.png" alt="焦一航">
+                            </div>
+                            <h4>焦一航</h4>
+                        </div>
+                        <div class="member-card">
+                            <div class="avatar">
+                                <img src="image/zhangzuoxing.png" alt="张作兴">
+                            </div>
+                            <h4>张作兴（阿怪）</h4>
+                        </div>
+                        <div class="member-card">
+                            <div class="avatar">
+                                <img src="image/huangbaixiang.png" alt="黄百祥">
+                            </div>
+                            <h4>黄百祥（阿叻）</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-group">
+                    <h3>境外长线经理</h3>
+                    <div class="member-cards">
+                        <div class="member-card">
+                            <div class="avatar">
+                                <img src="image/huanghaoran.png" alt="黄浩然">
+                            </div>
+                            <h4>黄浩然</h4>
+                        </div>
+                        <div class="member-card">
+                            <div class="avatar">
+                                <img src="image/huangbaixiang.png" alt="黄百祥">
+                            </div>
+                            <h4>黄百祥（阿叻）</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-group">
+                    <h3>定制团经理</h3>
+                    <div class="member-cards">
+                        <div class="member-card">
+                            <div class="avatar">
+                                <img src="image/xuaiming.png" alt="许爱明">
+                            </div>
+                            <h4>许爱明（小北）</h4>
+                            <p class="member-note">小北-行走20岁定制师</p>
+                        </div>
+                        <div class="member-card">
+                            <div class="avatar">
+                                <img src="image/jiangyuhao.png" alt="江育浩">
+                            </div>
+                            <h4>江育浩（浩浩）</h4>
+                            <p class="member-note">群通知助手 勿加</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-group">
+                    <h3>短线经理</h3>
+                    <div class="member-cards">
+                        <div class="member-card">
+                            <div class="avatar">
+                                <img src="image/songminghao.png" alt="宋铭浩">
+                            </div>
+                            <h4>宋铭浩（铭浩）</h4>
+                            <p class="member-note">sonmin</p>
+                        </div>
+                        <div class="member-card">
+                            <div class="avatar">
+                                <img src="image/zengfanxing.png" alt="曾繁兴">
+                            </div>
+                            <h4>曾繁兴（阿星）</h4>
+                            <p class="member-note">通知号，不加好友</p>
+                        </div>
+                        <div class="member-card">
+                            <div class="avatar">
+                                <img src="image/liaoguowei.png" alt="廖国伟">
+                            </div>
+                            <h4>廖国伟（小帅）</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="responsibility">
+            <h2>岗位职责</h2>
+            <div class="job-intro card">
+                <p class="job-description">计调是旅游行业中非常重要的一个岗位，主要负责旅行线路的策划、组织和调配。</p>
+            </div>
+            
+            <div class="responsibilities-grid">
+                <div class="responsibility-card">
+                    <div class="responsibility-icon">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h3>线路策划</h3>
+                    <p>根据客户需求和市场调研，策划并设计旅行线路，包括景点选择、交通安排、住宿条件等。</p>
+                </div>
+
+                <div class="responsibility-card">
+                    <div class="responsibility-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>供应商协调</h3>
+                    <p>与各个旅游供应商进行合作，包括酒店、景点、交通等，协商合作合同和价格，并保持良好的合作关系。</p>
+                </div>
+
+                <div class="responsibility-card">
+                    <div class="responsibility-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>行程安排</h3>
+                    <p>对旅行行程进行安排和调整，确保行程的合理性和顺畅性，包括时间安排、行程流程、交通工具等。</p>
+                </div>
+
+                <div class="responsibility-card">
+                    <div class="responsibility-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>资源调配</h3>
+                    <p>根据客户需求和实际情况，调配资源，如车辆、导游、餐厅等，确保旅行过程中的资源充足和高效利用。</p>
+                </div>
+
+                <div class="responsibility-card">
+                    <div class="responsibility-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>风险管理</h3>
+                    <p>在旅行过程中，及时应对和解决各种问题，如交通延误、突发事件等确保旅行的安全和顺利进行。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="tools">
+            <h2>常用工具</h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h3>后台管理系统</h3>
+                    <p>用于后台工作，包括更改线路配置、更新路线说明书、审核报销、完成路线收支表等</p>
+                    <a href="https://master.walking20s.com/go20/mgr/#/login" target="_blank" class="tool-link">
+                        访问系统
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-images"></i>
+                    </div>
+                    <h3>摄图网</h3>
+                    <p>用于日常素材的搜寻，线路图片等</p>
+                    <div class="tool-credentials">
+                        <p>账号：13126283568</p>
+                        <p>密码：a19960530</p>
+                    </div>
+                    <a href="https://699pic.com" target="_blank" class="tool-link">
+                        访问网站
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>稿定网</h3>
+                    <p>用于小程序的稿定设计，修改等</p>
+                    <div class="tool-credentials">
+                        <p>账号：13719147023</p>
+                        <p>密码：walker20s2018</p>
+                    </div>
+                    <div class="tool-warning">
+                        <p>注意：会员账号只有一个，使用前请询问其他成员是否正在使用</p>
+                    </div>
+                    <a href="https://www.gaoding.com/dam/my/113646815" target="_blank" class="tool-link">
+                        访问网站
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3>境外合同网站</h3>
+                    <p>用于境外路线合同的指定</p>
+                    <div class="tool-credentials">
+                        <p>账号：13719147023</p>
+                        <p>密码：Walker20s2024!</p>
+                    </div>
+                    <a href="https://lxs.mr.mct.gov.cn/login" target="_blank" class="tool-link">
+                        访问网站
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-ticket-alt"></i>
+                    </div>
+                    <h3>境内旅行社售票管理后台</h3>
+                    <p>用于境内售票的开票</p>
+                    <div class="tool-credentials">
+                        <p>账号：zs1865</p>
+                        <p>密码：a123456@</p>
+                    </div>
+                    <a href="https://pcdn.cleartv.cn/travelAgency/#/user/login?project=zhaosu" target="_blank" class="tool-link">
+                        访问网站
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="documents">
+            <h2>常用文档</h2>
+            <div id="process-docs" class="document-category">
+                <h3>计调流程指引</h3>
+                <div class="documents-grid">
+                    <div class="document-card">
+                        <div class="document-icon">
+                            <i class="fas fa-table"></i>
+                        </div>
+                        <h3>计调流程表</h3>
+                        <a href="https://doc.weixin.qq.com/sheet/e3_AM4AxQYGAPsL8wMVh6FRoC5FHB5CI?scode=AH4AHQd5AAgmZr0Hm9AM4AxQYGAPs" target="_blank" class="document-link">
+                            查看文档
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="document-card">
+                        <div class="document-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <h3>计调流程图</h3>
+                        <a href="https://doc.weixin.qq.com/flowchart/f4_AQoAXgYAAIEH4ojEwfDTpuwXbJopZ?scode=AH4AHQd5AAgYjHQrBRAQoAXgYAAIE" target="_blank" class="document-link">
+                            查看文档
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="common-docs" class="document-category">
+                <h3>计调常用文档</h3>
+                <div class="documents-grid">
+                    <div class="document-card">
+                        <div class="document-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h3>线路成本表</h3>
+                        <p>模板</p>
+                        <a href="https://doc.weixin.qq.com/sheet/e3_AQoAXgYAAIE1gLPipk2Seu1100Bp7?scode=AH4AHQd5AAgZ18B2mZAQoAXgYAAIE" target="_blank" class="document-link">
+                            查看文档
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="document-card">
+                        <div class="document-icon">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <h3>境外出团自检表</h3>
+                        <a href="https://doc.weixin.qq.com/sheet/e3_Ac4AIQaQAKcykKMlmrPR1qqGkvtOA?scode=AH4AHQd5AAgd1d0QbbAQoAXgYAAIE&tab=gw7bx8" target="_blank" class="document-link">
+                            查看文档
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="document-card">
+                        <div class="document-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>出团保险安排表</h3>
+                        <p>2024年</p>
+                        <a href="https://doc.weixin.qq.com/sheet/e3_AFwAgQY8APYcopFu5YvRKapcJScqo?scode=AH4AHQd5AAgUYtORcTAFwAgQY8APY" target="_blank" class="document-link">
+                            查看文档
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="document-card">
+                        <div class="document-icon">
+                            <i class="fas fa-money-check-alt"></i>
+                        </div>
+                        <h3>长线尾款收取</h3>
+                        <p>2024年</p>
+                        <a href="https://doc.weixin.qq.com/sheet/e3_AFwAgQY8APYWesIlPLqTFGMERYcwX?scode=AH4AHQd5AAg87RLFJXAO8AhwbfAIE" target="_blank" class="document-link">
+                            查看文档
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="document-card">
+                        <div class="document-icon">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                        </div>
+                        <h3>队长税费</h3>
+                        <a href="https://doc.weixin.qq.com/sheet/e3_AO8AhwbfAIEeyQ6Th5qQRKJoX0sUm?scode=AH4AHQd5AAgwvTQYjuAO8AhwbfAIE" target="_blank" class="document-link">
+                            查���文档
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="document-card">
+                        <div class="document-icon">
+                            <i class="fas fa-users-cog"></i>
+                        </div>
+                        <h3>长线队长安排表</h3>
+                        <a href="https://doc.weixin.qq.com/sheet/e3_AM4AxQYGAPsArgz9DUeRLuC3zbCef?scode=AH4AHQd5AAgulo9KCKAO8AhwbfAIE" target="_blank" class="document-link">
+                            查看文档
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="document-card">
+                        <div class="document-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>供应商表</h3>
+                        <a href="https://doc.weixin.qq.com/sheet/e3_Ae4AvAYzACUnMHOJ0cORIuf1CKQXk?scode=AH4AHQd5AAgyGZs2R5AQoAXgYAAIE&tab=95qkk7" target="_blank" class="document-link">
+                            查看文档
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 其他部分类似，根据文档内容继续添加 -->
+    </main>
+
+    <footer>
+        <p>© 2024 行走20岁. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function smoothScroll(targetId) {
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+
+        function logout() {
+            sessionStorage.removeItem('isLoggedIn');
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+</html> 
