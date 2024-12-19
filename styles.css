@@ -30,6 +30,12 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition: background-color 0.3s ease;
+}
+
+nav.scrolled {
+    background-color: rgba(255, 107, 0, 0.95);
+    backdrop-filter: blur(10px);
 }
 
 nav .logo {
@@ -193,13 +199,30 @@ ul {
 }
 
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        text-align: center;
+    nav {
+        height: auto;
+        padding: 1rem;
     }
     
-    nav ul li {
-        margin: 0.5rem 0;
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: var(--primary-color);
+        padding: 1rem;
+    }
+    
+    nav ul.active {
+        display: flex;
+    }
+    
+    .menu-toggle {
+        display: block;
+        font-size: 1.5rem;
+        color: white;
+        cursor: pointer;
     }
 } 
 

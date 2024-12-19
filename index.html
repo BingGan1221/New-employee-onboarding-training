@@ -6,17 +6,80 @@
     <title>行走20岁 - 欢迎加入我们！</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preload" href="image/logo/walker20slogo-05.png" as="image">
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" as="style">
     <script>
         // 检查是否已登录
         if (!sessionStorage.getItem('isLoggedIn')) {
             window.location.href = 'login.html';
         }
+
+        window.addEventListener('load', function() {
+            // 页面加载完成后隐藏loading动画
+            const loadingOverlay = document.querySelector('.loading-overlay');
+            if (loadingOverlay) {
+                loadingOverlay.classList.add('hidden');
+                // 动画结束后移除元素
+                setTimeout(() => {
+                    loadingOverlay.style.display = 'none';
+                }, 300); // 300ms是transition的持续时间
+            }
+        });
     </script>
+    <meta name="description" content="行走20岁 - 永远年轻，永远热泪盈眶！加入我们的大家庭，开启精彩的旅程。">
+    <meta name="keywords" content="行走20岁,旅行,年轻人,团队建设,企业文化">
+    <meta property="og:title" content="行走20岁 - 欢迎加入我们！">
+    <meta property="og:description" content="永远年轻，永远热泪盈眶！">
+    <meta property="og:image" content="image/logo/walker20slogo-05.png">
+    <meta property="og:url" content="https://your-website.com">
 </head>
 <body>
+    <div class="loading-overlay">
+        <div class="spinner"></div>
+    </div>
+
+    <style>
+    .loading-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        transition: opacity 0.3s ease;
+    }
+
+    .loading-overlay.hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .spinner {
+        width: 50px;
+        height: 50px;
+        border: 3px solid #f3f3f3;
+        border-top: 3px solid var(--primary-color);
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    </style>
+
     <header>
-        <nav>
-            <div class="logo">行走20岁</div>
+        <nav role="navigation" aria-label="主导航">
+            <div class="logo" role="banner">行走20岁</div>
+            <button class="menu-toggle" aria-label="切换菜单" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
             <ul>
                 <li><a href="#onboarding" onclick="smoothScroll('onboarding'); return false;">入职办理</a></li>
                 <li><a href="#company" onclick="smoothScroll('company'); return false;">公司介绍</a></li>
@@ -315,7 +378,7 @@
                         <i class="fas fa-tasks"></i>
                     </div>
                     <h3>资源调配</h3>
-                    <p>根据客户需求和实际情况，调配资源，如车辆、导游、餐厅等，确保旅行过程中的资源充足和高效利用。</p>
+                    <p>根据客户需求和实际情况，调配资源，如车辆、导游、餐厅等，确保旅行过程中资源充足和高效利用。</p>
                 </div>
 
                 <div class="responsibility-card">
@@ -409,6 +472,61 @@
                         <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-hotel"></i>
+                    </div>
+                    <h3>美团分销平台</h3>
+                    <p>用于酒店预订和管理</p>
+                    <a href="https://mf.meituan.com/index.html" target="_blank" class="tool-link">
+                        访问系统
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-bed"></i>
+                    </div>
+                    <h3>Bedsonline</h3>
+                    <p>境外酒店预订平台</p>
+                    <div class="tool-credentials">
+                        <p>账号：HHUANG23</p>
+                        <p>密码：Huang4115394@</p>
+                    </div>
+                    <a href="https://app-bedsonline.gta-travel.cn/auth/login?redirectTo=%2Fmain" target="_blank" class="tool-link">
+                        访问系统
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>WhatsApp</h3>
+                    <p>用于境外供应商沟通</p>
+                    <div class="tool-warning">
+                        <p>请使用Chrome、Firefox或Edge浏览器访问</p>
+                    </div>
+                    <a href="https://web.whatsapp.com/" target="_blank" class="tool-link">
+                        访问网站
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Agoda</h3>
+                    <p>国际酒店预订平台</p>
+                    <a href="https://www.agoda.cn/" target="_blank" class="tool-link">
+                        访问网站
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -496,7 +614,7 @@
                         </div>
                         <h3>队长税费</h3>
                         <a href="https://doc.weixin.qq.com/sheet/e3_AO8AhwbfAIEeyQ6Th5qQRKJoX0sUm?scode=AH4AHQd5AAgwvTQYjuAO8AhwbfAIE" target="_blank" class="document-link">
-                            查���文档
+                            查看文档
                             <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
@@ -549,5 +667,7 @@
             window.location.href = 'login.html';
         }
     </script>
+
+    <a href="#main-content" class="skip-link">跳转到主要内容</a>
 </body>
 </html> 
